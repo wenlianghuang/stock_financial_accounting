@@ -7,6 +7,7 @@ import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [signin,setSignIn] = React.useState(false)
   return (
     <>
       <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
@@ -53,9 +54,19 @@ export default function Navbar(props) {
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
-                <IndexDropdown />
-              </li>
+              {signin ? (
+                <li className="flex items-center">
+                  <IndexDropdown />
+                </li>  
+              ):(
+                
+                <li className=" flex items-center">
+                  <Link to="/auth/login">
+                    Sigin In
+                  </Link>
+                </li>
+              )}
+              
               <li className="flex items-center">
                 <a
                   className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"

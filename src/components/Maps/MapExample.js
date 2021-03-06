@@ -6,12 +6,12 @@ import {
   GoogleMap,
   Marker,
 } from "react-google-maps";
-
+//25.025555948276757, 121.54115979094041
 const MapExampleScript = withScriptjs(
   withGoogleMap((props) => (
     <GoogleMap
       defaultZoom={12}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
+      defaultCenter={{ lat: 25.025555948276757, lng: 121.54115979094041 }}
       defaultOptions={{
         scrollwheel: false,
         styles: [
@@ -58,7 +58,7 @@ const MapExampleScript = withScriptjs(
         ],
       }}
     >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
+      <Marker position={{ lat: 25.025555948276757 , lng: 121.54115979094041 }} />
     </GoogleMap>
   ))
 );
@@ -66,7 +66,7 @@ const MapExampleScript = withScriptjs(
 function MapExample() {
   return (
     <MapExampleScript
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa38mKVtPLL79uSyUTU2Ff-6We3chZd-c"
       loadingElement={<div className="h-full" />}
       containerElement={<div className="relative w-full rounded h-600-px" />}
       mapElement={<div className="rounded h-full" />}
